@@ -1,0 +1,64 @@
+Lesson 1 notes: saving multiple versions of files helps with debugging
+
+    cd downloads/  $$$ in the command line will direct the computer to the downloads files 
+    diff -u file1.js file2.gitjs $$$ will compare the two files and return the lines where they differ 
+        $$$ -u just means it gives the output in a unified way. 
+    git log --stat file1.js file2.js $$$ shows the various commits and gives stats on how many files 
+        $$$ were changed and # of changes. PRESS q to quit log and return to input line. 
+    git config --global color.ui auto $$$ colores interserted and deleted text.
+    conmand+shift+h $$$ takes you to home directory
+    git diff $$$ same as diff, but shows difference between 2 commits in git. 
+        $$$ It takes two arguments - the two commit ids to compare. 
+    git clone $$$ imports entire git file including past commits.
+        $$$ It takes one argument - the url of the repository to copy. 
+    git checkout $$$ allows you to see/run the old version of the entire project. 
+        $$$ It takes one argument - the commit ID to restore. 
+
+    For Code VS click middle side button to see changed files. 
+        At the top of this panel you can write a message and command+enter to commit changes.
+        Might need to actio some changes. 
+    
+
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+   +/- mark where the different lines are. allows to quickly compare changes. 
+   Caviot: Seems to need the files to match up line for line. 
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    see different verson, make note of old ideas and possibly use them in the future. 
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    You can limit the number of versions to make the changes more understandable. 
+    You can save at meaningful points in the process that are too subtle for automation. 
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Some projects on Git use multiple files for one project, while other systems tend 
+    to be contained in one file.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    You can use log to find where changes were made and diff to view those changes. 
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    You can always go back and figure out exactly where your code broke down even 
+    if you don't catch the error right away. There is also a systematic way to find
+    the error by using git log and git checkout (+id) to run older versions. 
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    My machine learning course and for future coding projects. 
+
+
+
+
+
