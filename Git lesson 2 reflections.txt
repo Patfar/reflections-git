@@ -3,7 +3,16 @@ Lesson 2 notes:
     ls $$$ lists all files
     ls -a $$$ lists all files including hidden files beginning with a period. 
     git init $$$ initializes a git repository. Does not create a commit. 
-    git status $$$ 
+    git status $$$ shows files, the last commit and which files have changes. 
+    git add $$$ followed by the file name $$$ adds the file to the staging area. 
+        $$$ same as clicking the staging buttom on the version control sidepanel?
+    
+
+    Code VS version comtrol panel 
+        "U" means untracked i.e. no commits. 
+        "M" means Modified i.e. changed since the last commit
+        There is also a "+" to stage files individually 
+
 
 What happens when you initialize a repository? Why do you need to do it?
 
