@@ -6,29 +6,93 @@ Lesson 2 notes:
     git status $$$ shows files, the last commit and which files have changes. 
     git add $$$ followed by the file name $$$ adds the file to the staging area. 
         $$$ same as clicking the staging buttom on the version control sidepanel?
+    git reset $$$ followed by the file name $$$ removes a files from the staging area
+    git commit -a $$$ commits the prject in the staging area. 
+
+    git config --global user.name "Your Name" $$$ configures username
+    git config --global user.email you@example.com $$$ configures user email
+    git commit --amend --reset-author $$$ Updates old commit with new username,email
+
+    git diff $$$ with no arguements shows any changes made in the working directory 
+        $$$ that have not been moved to the staging area. 
+    git diff --staged $$$ shows difference between staged files and the most recent commit. 
+    git reset --hard $$$ reverts back to the most recent commit. Cannot be undone. 
+        $$$ discards all changes in working directory and staging area.
+
+    git checkout master $$$ leaves 'detached HEAD' state and restores most recent commit. 
+    git checkout "branch name" $$$ switches between branches. 
+    git branch $$$ shows the list of all current brant titles. The current branch has an *.
+    git branch "name" $$$ creats a branch named "name".
+    git checkout -b new_branch_name $$$ starts new branch and makes it the head. 
+            $$$ basically runs git branch and checkout. 
     
+    git merge branch_1_name branch_2_name $$$ merges two branches into which ever of the 
+            branches is checked out. 
+    git branch -d "branch name" $$$ deletes branch name for after a branch has been merged.
+    git show "Commit ID" $$$ show the difference between a commit and its parent even if 
+            the branch has been merged and the files are sorted chronilogically. 
+    git log --graph --oneline shows the different branches, easier to look at.
+
+    git remote $$$ shows remote repositories like on github.
+    git remote -v $$$ stands for Verbose i.e. gives more info than just git remote.
+    git remote add Repository_name url $$$ you choose the repository name. Git has the url. 
+            $$$ adds a remote repository to your project. Must open project in terminal first. 
+    git push Remote_name Branch_name $$$ pushes branch name onto remote repository named.        
+
+
 
     Code VS version comtrol panel 
-        "U" means untracked i.e. no commits. 
-        "M" means Modified i.e. changed since the last commit
+        "U" means Untracked i.e. no commits. 
+        "M" means Modified i.e. changed since the last commit.
+        "A" means added to the staging area for the first time.
         There is also a "+" to stage files individually 
+
+    diagram making webservices: gliffy, yUML
+
+
 
 
 What happens when you initialize a repository? Why do you need to do it?
 
+    You get a .git file in your folder in which commits can be stored. 
+    Without it there is nowhere to store previous version of your files. 
+
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
+
+    A repository is where old versions of your files are stored. Version 
+        control file folder. All old versions.
+    A working directory gives you both files using git and others that may not 
+        have version control. Total file folder. 
+    The Staging Area allows you to move files from the working directory into 
+        the repository without making a commit yet. Intermediate step. 
 
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+    You can add files to the staging area to separate different changes you've 
+    made and commit them separately. 
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+    If you want to add new optional features or save several versions of the 
+    project you're working on and deside which you like best later. 
+    Experimental versus known to work.
+
 How do the diagrams help you visualize the branch structure?
+
+    You can see the various parents and where files diverge. 
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+    Merging two branches takes the changes from each and automatically makes a 
+    new file. Thus changes from both files are retained. 
+
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+    Automation allows for easier merging in simple cases and shows you when a 
+    merge might need to be made with more care. Always doing it manually would
+    be more work. 
