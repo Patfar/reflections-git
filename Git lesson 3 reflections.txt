@@ -1,0 +1,8 @@
+Lesson 3 notes: Github 
+
+    git remote $$$ shows remote repositories like on github.
+    git remote -v $$$ stands for Verbose i.e. gives more info than just git remote.
+    git remote add Repository_name url $$$ you choose the repository name. Git has the url. 
+            $$$ adds a remote repository to your project. Must open project in terminal first. 
+    git push Remote_name Branch_name $$$ pushes branch name onto remote repository named.        
+
